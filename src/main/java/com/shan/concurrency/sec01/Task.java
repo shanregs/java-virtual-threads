@@ -12,7 +12,7 @@ public class Task {
 //        log.info("Starting IO intensive task");
         try {
             log.info("starting I/O task {}. Thread Info: {}", i, Thread.currentThread());
-            Thread.sleep(Duration.ofSeconds(10));
+            Thread.sleep(Duration.ofSeconds(10).toMillis());
             log.info("Ending I/O task {}. Thread Info: {}", i, Thread.currentThread());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
